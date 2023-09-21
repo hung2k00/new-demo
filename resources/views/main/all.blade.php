@@ -22,10 +22,13 @@
             <div class="cursor-pointer header_logo">
                 <img src="{{ asset('/images/logo.png') }}" alt="" class="w-36 h-20 ">
             </div>
-            <div class="flex justify-center items-center rounded-3xl cursor-pointer header_download">
+            <div class="flex justify-center items-center rounded-3xl cursor-pointer header_download relative" id="unhidden_app">
                 <img src="{{ asset('/images/direct-download.png') }}" alt="" class="h-5 w-5">
                 <div>
                     <p class="text-white pl-2 pt-3" id="downloadText">Tải app ngay</p>
+                </div>
+                <div class="absolute top-[3rem] z-10 w-[20rem] h-[20rem] hidden" id="download_app">
+                    <img src="{{ asset('images/download_app.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -505,6 +508,26 @@
                     <div class="button_partner justify-center items-center hidden">
                         <button type="submit" >Liên hệ hợp tác</button>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="sponsors flex gap-[5rem] justify-center items-center">
+            <div class="">
+                <p>Các đơn vị tham gia</p>
+                <div class="-mt-[2rem]"><img src="{{ asset('images/line_underInfo.png') }}" alt=""></div>
+            </div>
+            <div class="flex gap-4">
+                <div>
+                    <img src="{{ asset('images/sponsors1.png') }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ asset('images/sponsors2.png') }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ asset('images/sponsors3.png') }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ asset('images/sponsors4.png') }}" alt="">
                 </div>
             </div>
         </div>
