@@ -1,0 +1,768 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+    height: 10vh;
+}
+
+#ulHeader {
+    z-index: 100;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.header_menu {
+    gap: 30vw;
+
+    @media screen and (max-width: 1050px) {
+        gap: 20vw;
+    }
+}
+
+.header_download {
+    background: linear-gradient(132deg,
+            #fd3379 0.00%,
+            #ce469c 100.00%);
+    padding: 1.5rem;
+    height: 3rem;
+}
+
+.header_download p {
+    font-family: "Noto Serif";
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.all_text_slide {
+    position: absolute;
+    top: 14rem;
+    min-width: 100%;
+    margin: auto;
+}
+
+.all_text {
+    float: left;
+    font-family: "UTM Aptima";
+    text-align: left;
+    font-style: normal;
+}
+
+.all_text .first_text {
+    font-size: 1.875rem;
+    font-weight: normal;
+
+}
+
+.all_text .sentrip {
+    font-size: 5.625rem;
+    font-weight: bold;
+}
+
+.all_text .all_sentrip img {
+    transform: rotate(45deg);
+}
+
+.wave_box {
+    top: -9rem;
+}
+
+.all_text .last_text {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+header li {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 0.05rem solid black;
+}
+
+.text_info {
+    font-family: "SVN-Arsilon";
+    font-size: 4.0625rem;
+    font-weight: normal;
+    font-style: normal;
+    color: #333333;
+}
+
+.image-slider {
+    display: flex;
+    gap: 1.875rem;
+    max-width: 80%;
+    overflow-y: auto;
+}
+
+.text__underInfo {
+
+    font-family: "Noto Serif";
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.188rem;
+    font-style: normal;
+    text-align: left;
+    color: #292929;
+}
+
+.all__items--underInfo {
+    min-width: 100%;
+    padding: 0 12vw;
+    gap: 2vw;
+}
+
+.main__feature {
+    background-image: url('/images/background1.png');
+}
+
+.main__feature-info {
+    padding-top: 5rem;
+}
+
+.main__feature .main__feature-items .fly_airplane {
+    margin-top: -5rem;
+}
+
+.main__feature-items .feature-items__text {
+    padding: 1rem;
+    border-bottom: solid 1px #383838;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 4rem;
+}
+
+.main__feature-items .feature-items__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__feature-items .text_label {
+    font-family: "Noto Serif";
+    font-size: 1.3125rem;
+    font-weight: bold;
+    line-height: 1.5px;
+    font-style: normal;
+    text-align: left;
+    color: #404040;
+}
+
+.main__feature-items .text_p {
+    font-family: "Noto Serif";
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+    font-style: normal;
+    text-align: left;
+    color: #ff77ad;
+}
+
+.last__slider .last__slider-text h1 {
+    font-family: "SVN-Arsilon";
+    font-size: 4.0625rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #333333;
+}
+
+.last__slider .last__slider-text p {
+    font-family: "Noto Serif";
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    color: #545454;
+}
+
+.swiper {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    width: 160%;
+}
+
+.partner {
+    margin-top: 5rem;
+    background-image: url("/images/background4.png");
+}
+
+.partner_full {
+    padding: 10rem;
+    background-color: rgb(128, 128, 128, 0.5);
+}
+
+.partner_form {
+    border-radius: 2rem;
+    background-image: url("/images/background5.png");
+    padding: 4rem 2rem;
+    width: 26rem;
+}
+
+.partner_form-text {
+    font-family: "Noto Serif";
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.partner_form form p {
+    color: #ffffff;
+    font-size: 0.75rem;
+    float: right;
+}
+
+button[type="submit"] {
+    background: linear-gradient(138deg,
+    #fd3379 0.00%,
+    #ce469c 100.00%);
+    color: #ffffff;
+    border: solid 1px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 2rem;
+    width: 8rem;
+    margin-top: 3rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 2rem;
+    border-radius: 2rem;
+    padding: 0 1rem;
+}
+
+.partner_text {
+    color: #ffffff;
+    width: 40%;
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.partner_text h1 {
+    font-family: "SVN-Arsilon";
+    font-size: 4rem;
+}
+
+.partner_text h2 {
+    font-family: "Noto Serif";
+    font-size: 1.5625rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+.partner_text-img {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.partner_text p {
+    font-family: "Noto Serif";
+    font-size: 1.125rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1500px) {
+    .main__feature-items {
+        gap: 0rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .partner_full {
+        padding: 0rem;
+    }
+    .partner_text h1 {
+        font-size: 3rem;
+    }
+    .main__feature-items .text_label {
+        line-height: unset;
+        ;
+    }
+    .partner_text-img {
+        width: 10%;
+    }
+    .fix_img {
+        width: 18%;
+    }
+    .main__feature-items .phone-feature {
+        gap: 0rem;
+    }
+
+    .main__feature-items .phone-feature .feature-items .feature-items__text {
+        gap: 1rem;
+    }
+
+    .main__feature-items .phone-feature .feature-items .feature-items__text .mix_feature {
+        gap: 1rem;
+    }
+
+    .wave_box {
+        top: -7.8rem;
+    }
+
+    .all_text_slide {
+        top: 9rem;
+    }
+
+    .header_logo img {
+        height: 4rem;
+        width: 7rem;
+    }
+
+    .left_arrow {
+        display: none;
+    }
+
+    .right_arrow {
+        display: none;
+    }
+
+    .flower_info {
+        margin-left: -14rem;
+    }
+
+    .all__items--underInfo .all__items_phone .icon__app img {
+        height: 7vh;
+    }
+
+    .all__items--underInfo .qr__download .header_download {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .button_partner {
+        display: flex;
+        padding-bottom: 2rem;
+    }
+    .partner_form {
+        display: none;
+    }
+    .partner_text {
+        width: 61%;
+    }
+    .last__slider-text {
+        margin-top: 6rem;
+    }
+
+    .swiper-wrapper {
+        width: 220%;
+    }
+
+    .main__feature-items .text_label {
+        font-size: 2rem;
+    }
+
+    .mix_feature {
+        padding: 3rem;
+        text-align: center;
+        flex: 0 0 38%;
+    }
+
+    .text_info {
+        display: unset;
+        margin-top: 5rem;
+    }
+
+    .text_info p {
+        font-size: 2rem;
+    }
+
+    .image-slider {
+        margin-top: 2rem;
+        min-width: 100%;
+        gap: 0rem;
+    }
+
+    .image-slider1 {
+        order: 2;
+        width: 72%;
+    }
+
+    .image-slider2 {
+        order: 1;
+        height: 100%;
+        width: 14%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-slider1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-slider3 {
+        order: 3;
+        height: 100%;
+        width: 14%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full_info {
+        justify-content: unset;
+        align-items: unset;
+        gap: 0rem;
+    }
+
+    .text_info {
+        font-size: 3rem;
+    }
+
+    .under_info {
+        display: none;
+    }
+
+    .flower_info {
+        margin-left: -10rem;
+    }
+
+    .text_info {
+        margin-top: 6rem;
+    }
+
+    .last_text {
+        display: none;
+    }
+
+    .wave_box {
+        top: -6rem;
+    }
+
+    .all_text_slide {
+        top: 6.5rem;
+    }
+
+    header {
+        height: 9vh;
+        padding: 1.5vh 0vh;
+    }
+
+    .menu_items {
+        order: 3;
+    }
+
+    .header_logo {
+        order: 1;
+    }
+
+    .header_logo img {
+        height: 4rem;
+        width: 7rem;
+    }
+
+    .header_download {
+        order: 2;
+    }
+
+    .main__feature .main__feature-items .fly_airplane {
+        margin-top: -15rem;
+    }
+
+    .fly_2 .fly_2_img1 {
+        display: none;
+    }
+
+    .feature-items {
+        display: none;
+    }
+
+    .phone-feature .phone-items {
+        margin-left: 2rem;
+    }
+
+    .main__feature-items {
+        margin-top: 20rem;
+    }
+
+    .feature-items_2 {
+        display: flex;
+        overflow: auto;
+    }
+
+    .main__feature-items .feature-items__text {
+        gap: 0rem;
+        border: none;
+    }
+
+    .main__feature-items .feature-items__text .text_label {
+        line-height: unset;
+        text-align: center;
+    }
+
+    .slider-container {
+        overflow: hidden;
+    }
+
+    .mix-features {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wave_box {
+        top: -5rem;
+    }
+
+    .swiper-wrapper {
+        width: 250%;
+    }
+
+    .all_text .sentrip {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .all_text .first_text {
+        font-size: 1.3rem;
+    }
+
+    .all_text .last_text {
+        font-size: 0.75rem;
+    }
+
+    .image-slider img {
+        width: 140%;
+        height: auto;
+        gap: 0.5rem;
+    }
+
+    .full_info {
+        gap: 1.875rem;
+    }
+
+    .text_info {
+        margin-top: 2rem;
+    }
+
+    .phone-feature .phone-items {
+        margin-left: 0rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .partner_text {
+        width: 90%;
+    }
+    .partner_text h1 {
+        font-size: 2.2rem;
+    }
+    .partner_text h2 {
+        font-size: 1.2rem;
+    }
+    .partner_text p {
+        font-size: 1rem;
+    }
+    .last__slider .last__slider-text h1 {
+        font-size: 2.1rem;
+    }
+
+    .last__slider .last__slider-text p {
+        font-size: 0.75rem;
+    }
+
+    .swiper {
+        margin-top: 1rem;
+    }
+
+    .last__slider-text {
+        margin-top: 0rem;
+    }
+
+    .swiper-wrapper {
+        width: 270%;
+    }
+
+    .text_info p {
+        font-size: 1rem;
+    }
+
+    .text_slide_info {
+        display: none;
+    }
+
+    .flower_info {
+        display: none;
+    }
+
+    .wave_box {
+        top: -2rem;
+    }
+
+    .all_text_slide {
+        top: 3rem;
+    }
+
+    .all_text .sentrip {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .all_text .first_text {
+        font-size: 0.75rem;
+    }
+
+    .all_text .last_text {
+        margin-top: -0.5rem;
+        font-size: 0.35rem;
+    }
+
+    .all_sentrip .sentrip_img {
+        top: 0rem;
+        right: -0.25rem;
+        height: 2rem;
+        width: 3rem;
+    }
+
+    header {
+        height: 8vh;
+        padding: 1vh 0vh;
+    }
+
+    .header_menu {
+        gap: 15vw;
+    }
+
+    .header_logo img {
+        height: 2rem;
+        width: 4rem;
+    }
+
+    .header_download {
+        height: 2rem;
+        padding: 0.75rem;
+        width: 8rem;
+    }
+
+    .header_download img {
+        width: 0.75rem;
+        height: 1rem;
+    }
+
+    .header_download p {
+        font-size: 0.75rem;
+    }
+
+    .image-slider {
+        margin-top: 2rem;
+        min-width: 100%;
+        gap: 0.35rem;
+    }
+
+    .image-slider1 {
+        order: 2;
+        width: 72%;
+    }
+
+    .image-slider2 {
+        order: 1;
+        height: 100%;
+        width: 14%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-slider3 {
+        order: 3;
+        height: 100%;
+        width: 14%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full_info {
+        justify-content: unset;
+        align-items: unset;
+        gap: 0rem;
+    }
+
+    .text_info {
+        font-size: 3rem;
+    }
+
+    .phone-feature .phone-items {
+        margin-left: -2rem;
+        z-index: 100;
+    }
+
+    .under_feature .under_feature_img {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .under_feature .under_feature_img1 {
+        width: 17rem;
+    }
+
+    .under_feature .under_feature_img2 {
+        left: -3rem;
+        top: 4.5rem;
+    }
+
+    .main__feature-items .feature-items__text {
+        border: none;
+    }
+
+    .main__feature-items {
+        margin-top: 6rem;
+    }
+
+    .feature-items_2 {
+        display: flex;
+    }
+
+    .mix_feature {
+        display: block;
+        padding: 1rem;
+        flex: 0 0 36%;
+    }
+
+    .main__feature-items .text_label {
+        font-size: 1.2rem;
+    }
+
+    .main__feature-items .text_p {
+        font-size: 1rem;
+        line-height: unset;
+    }
+}
