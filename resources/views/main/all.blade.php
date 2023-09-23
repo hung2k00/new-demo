@@ -22,7 +22,8 @@
             <div class="cursor-pointer header_logo">
                 <img src="{{ asset('/images/logo.png') }}" alt="" class="w-36 h-20 ">
             </div>
-            <div class="flex justify-center items-center rounded-3xl cursor-pointer header_download relative" id="unhidden_app">
+            <div class="flex justify-center items-center rounded-3xl cursor-pointer header_download relative"
+                id="unhidden_app">
                 <img src="{{ asset('/images/direct-download.png') }}" alt="" class="h-5 w-5">
                 <div>
                     <p class="text-white pl-2 pt-3" id="downloadText">Tải app ngay</p>
@@ -409,73 +410,76 @@
             <div class="last__slider-img relative h-full">
                 <div class="swiper mySwiper overflow-hidden">
                     <div class="swiper-wrapper flex overflow-hidden">
-                      <div class="swiper-slide">
-                        <img src="{{ asset('images/last_slider1.png') }}" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{{ asset('images/last_slider2.png') }}" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{{ asset('images/last_slider3.png') }}" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{{ asset('images/last_slider4.png') }}" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{{ asset('images/last_slider5.png') }}" />
-                      </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/last_slider1.png') }}" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/last_slider2.png') }}" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/last_slider3.png') }}" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/last_slider4.png') }}" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/last_slider5.png') }}" />
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                  </div>
+                </div>
             </div>
         </div>
         <div class="partner">
             <div class="partner_full flex justify-center items-center gap-[9rem]">
-                <div class="partner_form w">
-                    <div class="text-white">
-                        <p class="partner_form-text">Đối tác quan tâm vui lòng để lại thông tin để được tư vấn giải đáp</p>
+                <div id="" class="full_modal">
+                    <div class="partner_form">
+                        <div class="text-white">
+                            <p class="partner_form-text">Đối tác quan tâm vui lòng để lại thông tin để được tư vấn giải
+                                đáp
+                            </p>
+                        </div>
+                        <form action="">
+                            <div>
+                                <input type="text" name="name" id="name" placeholder="*Họ và tên">
+                            </div>
+                            <div class="mt-3">
+                                <input type="text" name="phone_number" id="phone_number"
+                                    placeholder="*Số điện thoại">
+                                <p class="small">(*mọi thông tin đều được bảo mật)</p>
+                            </div>
+                            <div>
+                                <input type="text" name="capcha" id="capcha" placeholder="*Nhập mã Capcha">
+                            </div>
+                        </form>
+                        <div class="flex gap-4">
+                         <button type="submit">Gửi</button>
+                         <div class="close hidden">
+                             <button type="submit">Close</span>
+                         </div>
+                        </div>
                     </div>
-                    <form action="">
-                        <div>
-                            <input type="text" name="name" id="name" placeholder="*Họ và tên">
-                        </div>
-                        <div class="mt-3">
-                            <input type="text" name="phone_number" id="phone_number" placeholder="*Số điện thoại">
-                            <p class="small">(*mọi thông tin đều được bảo mật)</p>
-                        </div>
-                        <div>
-                            <input type="text" name="capcha" id="capcha" placeholder="*Nhập mã Capcha">
-                        </div>
-                        <button type="submit" >Gửi</button>
-                    </form>
                 </div>
                 <div class="partner_text">
                     <div class="mt-[2rem]">
                         <h1>Cơ hội chưa từng có</h1>
-                        <img src="{{ asset("images/line_partner.png") }}" alt="" class="-mt-[1rem]">
+                        <img src="{{ asset('images/line_partner.png') }}" alt="" class="-mt-[1rem]">
                     </div>
                     <div>
                         <h2>Khi trở thành đối tác của Sentrip</h2>
                     </div>
                     <div class="flex">
                         <div class="w-[8%] partner_text-img fix_img">
-                            <img src="{{ asset("images/partner_item1.png") }}" alt="" class="">
+                            <img src="{{ asset('images/partner_item1.png') }}" alt="" class="">
                         </div>
                         <div>
-                            <p>Tham gia sân chơi đẳng cấp cùng các đối tác uy tín và tiềm năng, trong nước cũng như quốc tế.</p>
+                            <p>Tham gia sân chơi đẳng cấp cùng các đối tác uy tín và tiềm năng, trong nước cũng như quốc
+                                tế.</p>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="w-[8%] partner_text-img">
-                            <img src="{{ asset("images/partner_item2.png") }}" alt="">
-                        </div>
-                        <div>
-                            <p>Xây dựng giá trị thương hiệu bền vững.</p>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="w-[8%] partner_text-img">
-                            <img src="{{ asset("images/partner_item3.png") }}" alt="">
+                            <img src="{{ asset('images/partner_item2.png') }}" alt="">
                         </div>
                         <div>
                             <p>Xây dựng giá trị thương hiệu bền vững.</p>
@@ -483,7 +487,15 @@
                     </div>
                     <div class="flex">
                         <div class="w-[8%] partner_text-img">
-                            <img src="{{ asset("images/partner_item4.png") }}" alt="">
+                            <img src="{{ asset('images/partner_item3.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p>Xây dựng giá trị thương hiệu bền vững.</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-[8%] partner_text-img">
+                            <img src="{{ asset('images/partner_item4.png') }}" alt="">
                         </div>
                         <div>
                             <p>Cơ hội tiếp cận hơn 65 triệu khách hàng của Viettel.</p>
@@ -491,47 +503,90 @@
                     </div>
                     <div class="flex">
                         <div class="w-[8%] partner_text-img fix_img">
-                            <img src="{{ asset("images/partner_item5.png") }}" alt="">
+                            <img src="{{ asset('images/partner_item5.png') }}" alt="">
                         </div>
                         <div>
-                            <p>Tư vấn, hỗ trợ xây dựng chiến lược truyền thông & marketing với các chuyên gia đầu ngành.</p>
+                            <p>Tư vấn, hỗ trợ xây dựng chiến lược truyền thông & marketing với các chuyên gia đầu ngành.
+                            </p>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="w-[8%] partner_text-img fix_img">
-                            <img src="{{ asset("images/partner_item6.png") }}" alt="">
+                            <img src="{{ asset('images/partner_item6.png') }}" alt="">
                         </div>
-                        <div >
+                        <div>
                             <p>Cập nhật các nghiên cứu, báo cáo & phân tích xu hướng khách hàng tiềm năng.</p>
                         </div>
                     </div>
                     <div class="button_partner justify-center items-center hidden">
-                        <button type="submit" >Liên hệ hợp tác</button>
+                        <button type="submit">Liên hệ hợp tác</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="sponsors flex gap-[5rem] justify-center items-center">
-            <div class="">
+            <div class="first_sponsors">
                 <p>Các đơn vị tham gia</p>
                 <div class="-mt-[2rem]"><img src="{{ asset('images/line_underInfo.png') }}" alt=""></div>
             </div>
-            <div class="flex gap-4">
-                <div>
-                    <img src="{{ asset('images/sponsors1.png') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/sponsors2.png') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/sponsors3.png') }}" alt="">
-                </div>
-                <div>
-                    <img src="{{ asset('images/sponsors4.png') }}" alt="">
+            <div class="relative overflow-hidden">
+                <div class="swiper swiperSponsers">
+                    <div class="swiper-wrapper flex gap-4">
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/sponsors1.png') }}" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/sponsors2.png') }}" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/sponsors3.png') }}" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/sponsors4.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="first__footer">
+            <div class="second__footer ">
+                <div class="third__footer flex p-4">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <img src="{{ asset('images/footer5.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="third__footer-phone -mt-[5rem]">
+                        <img src="{{ asset('images/footer6.png') }}" alt="">
+                    </div>
+                    <div class="footer__info text-white mt-[9rem]">
+                        <div>
+                            <h2>Thông tin liên hệ</h2>
+                            <p>Hotline: 1039</p>
+                            <p>Email: support@sentrip.vn</p>
+                            <p>Website: sentrip.vn</p>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>Tải ứng dụng</h3>
+                            </div>
+                            <div class="flex gap-2 download_app">
+                                <div>
+                                    <img src="{{ asset('images/googleplay.png') }}" alt="">
+                                </div>
+                                <div>
+                                    <img src="{{ asset('images/appstore.png') }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
@@ -548,7 +603,7 @@
         }
         updateImages();
         $(window).on("resize", updateImages);
-        var swiper = new Swiper(".mySwiper", {
+        var swiper_1 = new Swiper(".mySwiper", {
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
@@ -564,6 +619,57 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+        var swiper = new Swiper(".swiperSponsers", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var closeButton = $(".close");
+        var fullModal = $(".full_modal");
+        var modalContent = $(".partner_form");
+        var contactButton = $(".button_partner button");
+        function checkScreenWidth() {
+            if ($(window).width() < 900) {
+                fullModal.addClass("modal");
+                fullModal.attr("id", "myModal");
+                modalContent.addClass("modal-content");
+                var modal = $("#myModal");
+                contactButton.on("click", function() {
+                    modal.css("display", "block");
+                });
+
+                closeButton.on("click", function() {
+                    modal.css("display", "none");
+                });
+
+                $(window).on("click", function(event) {
+                    if (event.target == modal[0]) {
+                        modal.css("display", "none");
+                    }
+                });
+            } else {
+                contactButton.off("click");
+                closeButton.off("click");
+                $(window).off("click");
+                modal.css("display", "none");
+            }
+        }
+        checkScreenWidth();
+        $(window).resize(function() {
+            checkScreenWidth();
         });
     </script>
 </body>
