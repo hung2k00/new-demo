@@ -110,47 +110,50 @@
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
-                            <div class="justify-center items-center flex mt-2">
-
-                                <div class="flex w-[75rem]">
-                                    <div class="flex justify-center items-center gap-4 w-1/4 "
-                                        data-video-source="{{ asset('/video/test.mp4') }}">
-                                        <div class="modal_video">
-                                            <img src="{{ asset('/images/testvideo1.png') }}" alt="">
+                            <div class="slide_video relative overflow-hidden">
+                                <div class="justify-center items-center flex mt-2 slide_modal_video">
+                                    <div class="flex w-[75rem] slide_modal_content">
+                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
+                                            data-video-source="{{ asset('/video/test.mp4') }}">
+                                            <div class="modal_video">
+                                                <img src="{{ asset('/images/testvideo1.png') }}" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Nàng cover</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p>Nàng cover</p>
+                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
+                                            data-video-source="{{ asset('/video/test2.mp4') }}">
+                                            <div class="modal_video">
+                                                <img src="{{ asset('/images/testvideo2.png') }}" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Nắng lung linh remix</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="flex justify-center items-center gap-4 w-1/4 "
-                                        data-video-source="{{ asset('/video/test2.mp4') }}">
-                                        <div class="modal_video">
-                                            <img src="{{ asset('/images/testvideo2.png') }}" alt="">
+                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
+                                            data-video-source="{{ asset('/video/test3.mp4') }}">
+                                            <div class="modal_video">
+                                                <img src="{{ asset('/images/testvideo1.png') }}" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Birthday sex remix</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p>Nắng lung linh remix</p>
+                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
+                                            data-video-source="{{ asset('/video/test4.mp4') }}">
+                                            <div class="modal_video">
+                                                <img src="{{ asset('/images/testvideo2.png') }}" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Seve remix</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="flex justify-center items-center gap-4 w-1/4 "
-                                        data-video-source="{{ asset('/video/test3.mp4') }}">
-                                        <div class="modal_video">
-                                            <img src="{{ asset('/images/testvideo1.png') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <p>Birthday sex remix</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-center items-center gap-4 w-1/4 "
-                                        data-video-source="{{ asset('/video/test4.mp4') }}">
-                                        <div class="modal_video">
-                                            <img src="{{ asset('/images/testvideo2.png') }}" alt="">
-                                        </div>
-                                        <div>
-                                            <p>Seve remix</p>
-                                        </div>
+                                        <div class="swiper-pagination"></div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -693,7 +696,7 @@
                 clickable: true,
             },
         });
-        //change video
+        // //change video
         $("div[data-video-source]").click(function() {
             var videoSource = $(this).data("video-source");
             $("#video-player source").attr("src", videoSource);
@@ -765,6 +768,29 @@
             if (event.target == modalVideo[0]) {
                 modalVideo.css("display", "none");
                 videoPlayer.pause();
+            }
+            if ($(window).width() < 530) {
+                $('.slide_modal_video').addClass("swiper");
+                $('.slide_modal_video').addClass("swiperVideo");
+                $('.slide_modal_content').addClass("swiper-wrapper");
+                $('.slide_modal_img').addClass("swiper-slide");
+                var swiper = new Swiper(".swiperVideo", {
+                    effect: "coverflow",
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: "auto",
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
             }
         });
     </script>

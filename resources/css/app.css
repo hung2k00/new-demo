@@ -751,6 +751,19 @@ input[type="text"] {
         margin: 15% auto;
         width: 84% !important;
     }
+    #video-player {
+        height: 11rem;
+    }
+    #myModalVideo .modal-content {
+        border-radius: 1rem !important;
+    }
+    #myModalVideo .swiper {
+        width: 165%;
+        margin-left: -10rem;
+    }
+    .full_slideVideo .modal-content {
+        padding: 1.5rem;
+    }
     .partner_form-text {
         font-size: 1rem;
     }
