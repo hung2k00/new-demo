@@ -65,11 +65,8 @@
                 </div>
             </div>
         </div>
-        <div class="relative">
-            <div class="wave_box absolute">
-                <img src="{{ asset('images/wave1.png') }}" alt="">
-            </div>
-            <div class="relative z-10">
+        <div class="relative full_slideVideo">
+            <div class="pt-[10rem] full_slideVideo1">
                 <div class="flex justify-center items-center">
                     <div class="text_info mt-[8rem]">
                         <div class="">
@@ -87,7 +84,7 @@
                     <div class="text_slide_info">
                         <img src="{{ asset('images/TextInfo.png') }}" alt="">
                     </div>
-                    <div class="image-slider">
+                    <div class="image-slider" id="clickVideo">
                         <div class="image-slider1">
                             <img src="{{ asset('images/slide_info1.png') }}" alt="">
                         </div>
@@ -96,6 +93,64 @@
                         </div>
                         <div class="image-slider3">
                             <img src="{{ asset('images/slide_info3.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="myModalVideo" class="modal">
+                    <div class="modal-wrapper relative top-[14%]">
+                        <div class="modal-content">
+                            <div class="float-right ml-auto" id="closeVideo">
+                                <i class="fa-solid fa-xmark" style="color: #d31763;"></i>
+                            </div>
+                            <div class="flex justify-center items-center">
+                                <video controls width="900" height="340" id="video-player">
+                                    <source src="{{ asset('video/test.mp4') }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="justify-center items-center flex mt-2">
+
+                                <div class="flex w-[75rem]">
+                                    <div class="flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo1.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Nàng cover</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test2.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo2.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Nắng lung linh remix</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test3.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo1.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Birthday sex remix</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test4.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo2.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Seve remix</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -453,10 +508,10 @@
                             </div>
                         </form>
                         <div class="flex gap-4">
-                         <button type="submit">Gửi</button>
-                         <div class="close hidden">
-                             <button type="submit">Close</span>
-                         </div>
+                            <button type="submit">Gửi</button>
+                            <div class="close hidden">
+                                <button type="submit">Close</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -587,6 +642,7 @@
             </div>
         </div>
     </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
@@ -637,29 +693,55 @@
                 clickable: true,
             },
         });
+        //change video
+        $("div[data-video-source]").click(function() {
+            var videoSource = $(this).data("video-source");
+            $("#video-player source").attr("src", videoSource);
+            $("#video-player")[0].load();
+            $("#video-player")[0].play();
+        });
+        //thiet lap tu dong chuyen video khi video trước chạy xong
+        var videoSources = [
+            "{{ asset('/video/test.mp4') }}",
+            "{{ asset('/video/test2.mp4') }}",
+            "{{ asset('/video/test3.mp4') }}",
+            "{{ asset('/video/test4.mp4') }}"
+        ];
+        var currentVideoIndex = 0;
+        var videoPlayer = $("#video-player")[0];
+        videoPlayer.addEventListener("ended", function() {
+            currentVideoIndex++;
+            if (currentVideoIndex >= videoSources.length) {
+                currentVideoIndex = 0;
+            }
+            var nextVideoSource = videoSources[currentVideoIndex];
+            $("#video-player source").attr("src", nextVideoSource);
+            videoPlayer.load();
+            videoPlayer.play();
+        });
         var closeButton = $(".close");
         var fullModal = $(".full_modal");
         var modalContent = $(".partner_form");
         var contactButton = $(".button_partner button");
+
         function checkScreenWidth() {
+            var modal = $("#myModal");
             if ($(window).width() < 900) {
                 fullModal.addClass("modal");
                 fullModal.attr("id", "myModal");
                 modalContent.addClass("modal-content");
-                var modal = $("#myModal");
                 contactButton.on("click", function() {
                     modal.css("display", "block");
                 });
-
                 closeButton.on("click", function() {
                     modal.css("display", "none");
                 });
-
                 $(window).on("click", function(event) {
                     if (event.target == modal[0]) {
                         modal.css("display", "none");
                     }
                 });
+
             } else {
                 contactButton.off("click");
                 closeButton.off("click");
@@ -670,6 +752,20 @@
         checkScreenWidth();
         $(window).resize(function() {
             checkScreenWidth();
+        });
+        $("#clickVideo").on("click", function() {
+            $("#myModalVideo").css("display", "block");
+        });
+        $("#closeVideo").on("click", function() {
+            $("#myModalVideo").css("display", "none");
+            videoPlayer.pause();
+        });
+        $(window).on("click", function(event) {
+            var modalVideo = $("#myModalVideo");
+            if (event.target == modalVideo[0]) {
+                modalVideo.css("display", "none");
+                videoPlayer.pause();
+            }
         });
     </script>
 </body>
