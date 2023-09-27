@@ -142,67 +142,67 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <div id="myModalVideo" class="modal">
-                    <div class="modal-wrapper relative top-[14%]">
-                        <div class="modal-content slideIn">
-                            <div class="float-right ml-auto" id="closeVideo">
-                                <i class="fa-solid fa-xmark" style="color: #d31763;"></i>
-                            </div>
-                            <div class="flex justify-center items-center">
-                                <video controls width="900" height="340" id="video-player">
-                                    <source src="{{ asset('video/test.mp4') }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="slide_video relative overflow-hidden">
-                                <div class="justify-center items-center flex mt-2 slide_modal_video">
-                                    <div class="flex w-[75rem] slide_modal_content">
-                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
-                                            data-video-source="{{ asset('/video/test.mp4') }}">
-                                            <div class="modal_video">
-                                                <img src="{{ asset('/images/testvideo1.png') }}" alt="">
-                                            </div>
-                                            <div>
-                                                <p>Nàng cover</p>
-                                            </div>
+            <div id="myModalVideo" class="modal">
+                <div class="modal-wrapper relative top-[14%] w-[70%] mx-auto">
+                    <div class="modal-content slideIn">
+                        <div class="float-right ml-auto" id="closeVideo">
+                            <i class="fa-solid fa-xmark" style="color: #d31763;"></i>
+                        </div>
+                        <div></div>
+                        <div class="flex justify-center items-center">
+                            <video controls width="900" height="340" id="video-player">
+                                <source src="{{ asset('video/test.mp4') }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="slide_video relative overflow-hidden">
+                            <div class="justify-center items-center flex mt-2 slide_modal_video swiper textSwiper">
+                                <div class="flex w-[75rem] slide_modal_content swiper-wrapper">
+                                    <div class="slide_modal_img swiper-slide  flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo1.png') }}" alt="">
                                         </div>
-                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
-                                            data-video-source="{{ asset('/video/test2.mp4') }}">
-                                            <div class="modal_video">
-                                                <img src="{{ asset('/images/testvideo2.png') }}" alt="">
-                                            </div>
-                                            <div>
-                                                <p>Nắng lung linh remix</p>
-                                            </div>
+                                        <div>
+                                            <p>Nàng cover</p>
                                         </div>
-                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
-                                            data-video-source="{{ asset('/video/test3.mp4') }}">
-                                            <div class="modal_video">
-                                                <img src="{{ asset('/images/testvideo1.png') }}" alt="">
-                                            </div>
-                                            <div>
-                                                <p>Birthday sex remix</p>
-                                            </div>
+                                    </div>
+                                    <div class="slide_modal_img swiper-slide flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test2.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo2.png') }}" alt="">
                                         </div>
-                                        <div class="slide_modal_img flex justify-center items-center gap-4 w-1/4 "
-                                            data-video-source="{{ asset('/video/test4.mp4') }}">
-                                            <div class="modal_video">
-                                                <img src="{{ asset('/images/testvideo2.png') }}" alt="">
-                                            </div>
-                                            <div>
-                                                <p>Seve remix</p>
-                                            </div>
+                                        <div>
+                                            <p>Nắng lung linh remix</p>
                                         </div>
-                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="slide_modal_img swiper-slide flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test3.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo1.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Birthday sex remix</p>
+                                        </div>
+                                    </div>
+                                    <div class="slide_modal_img swiper-slide flex justify-center items-center gap-4 w-1/4 "
+                                        data-video-source="{{ asset('/video/test4.mp4') }}">
+                                        <div class="modal_video">
+                                            <img src="{{ asset('/images/testvideo2.png') }}" alt="">
+                                        </div>
+                                        <div>
+                                            <p>Seve remix</p>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="under_info relative">
             <div class="-mt-[4rem]">
@@ -237,8 +237,10 @@
                     <div class="px-4">
                         <img src="{{ asset('images/QR.png') }}" alt="">
                     </div>
-                    <div class="flex justify-center items-center rounded-3xl cursor-pointer header_download w-[50%]">
+                    <div
+                        class="flex gap-2 justify-center items-center rounded-3xl cursor-pointer header_download w-[50%]">
                         <p class="text-white pt-3">Tải app ngay</p>
+                        <i class="fa-solid fa-download" style="color: #ffffff;"></i>
                     </div>
                 </div>
             </div>
@@ -414,7 +416,7 @@
             </div>
         </div>
         <div class="main__feature-items slider-container hidden relative">
-        <div class="feature-items_2 mt-[4rem] mix-features hidden swiper swiperFeature">
+            <div class="feature-items_2 mt-[4rem] mix-features hidden swiper swiperFeature">
                 <div class="swiper-wrapper flex">
                     <div class="mix_feature swiper-slide">
                         <div class="feature-items__img">
@@ -554,8 +556,17 @@
                                     placeholder="*Số điện thoại">
                                 <p class="small">(*mọi thông tin đều được bảo mật)</p>
                             </div>
-                            <div>
-                                <input type="text" name="capcha" id="capcha" placeholder="*Nhập mã Capcha">
+                            <div class="flex gap-4 mt-[3rem] full_captcha">
+                                <div class="w-[50%] captcha_input">
+                                    <input type="text" name="capcha" id="capcha"
+                                        placeholder="*Nhập mã Capcha">
+                                </div>
+                                <div class="flex gap-3 w-[50%] captcha_show">
+                                    <div id="captcha"></div>
+                                    <div id="refresh">
+                                        <i class="fa-solid fa-arrows-rotate" style="color: #f3f1f3;"></i>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                         <div class="flex gap-4">
@@ -698,14 +709,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script type="text/javascript">
-        //change video
-        $("div[data-video-source]").click(function() {
-            var videoSource = $(this).data("video-source");
-            $("#video-player source").attr("src", videoSource);
-            $("#video-player")[0].load();
-            $("#video-player")[0].play();
-        });
-        //thiet lap tu dong chuyen video khi video trước chạy xong
+        // //change video
         var videoSources = [
             "{{ asset('/video/test.mp4') }}",
             "{{ asset('/video/test2.mp4') }}",
@@ -714,6 +718,19 @@
         ];
         var currentVideoIndex = 0;
         var videoPlayer = $("#video-player")[0];
+        var videoTitles = $(".slide_modal_img");
+        videoTitles.click(function() {
+            var clickedIndex = $(this).index();
+            if (clickedIndex != currentVideoIndex) {
+                currentVideoIndex = clickedIndex;
+                var nextVideoSource = videoSources[currentVideoIndex];
+                $("#video-player source").attr("src", nextVideoSource);
+                videoPlayer.load();
+                videoPlayer.play();
+                videoTitles.removeClass("bg-white bg-green-500 bg-red-500 bg-yellow-500"); // Xóa màu nền cũ
+                videoTitles.eq(currentVideoIndex).addClass("bg-white");
+            }
+        });
         videoPlayer.addEventListener("ended", function() {
             currentVideoIndex++;
             if (currentVideoIndex >= videoSources.length) {
@@ -723,7 +740,10 @@
             $("#video-player source").attr("src", nextVideoSource);
             videoPlayer.load();
             videoPlayer.play();
+            videoTitles.removeClass("bg-white bg-green-500 bg-red-500 bg-yellow-500"); // Xóa màu nền cũ
+            videoTitles.eq(currentVideoIndex).addClass("bg-white");
         });
+        videoTitles.eq(currentVideoIndex).addClass("bg-white");
         var closeButton = $(".close");
         var fullModal = $(".full_modal");
         var modalContent = $(".partner_form");
@@ -761,40 +781,12 @@
         });
         $("#clickVideo").on("click", function() {
             $("#myModalVideo").css("display", "block");
+            $(".under_info").css("z-index", "1");
         });
         $("#closeVideo").on("click", function() {
             $("#myModalVideo").css("display", "none");
+            $(".under_info").css("z-index", "2");
             videoPlayer.pause();
-        });
-        $(window).on("click", function(event) {
-            var modalVideo = $("#myModalVideo");
-            if (event.target == modalVideo[0]) {
-                modalVideo.css("display", "none");
-                videoPlayer.pause();
-            }
-            if ($(window).width() < 530) {
-                $('.slide_modal_video').addClass("swiper");
-                $('.slide_modal_video').addClass("swiperVideo");
-                $('.slide_modal_content').addClass("swiper-wrapper");
-                $('.slide_modal_img').addClass("swiper-slide");
-                var swiper = new Swiper(".swiperVideo", {
-                    effect: "coverflow",
-                    grabCursor: true,
-                    centeredSlides: true,
-                    slidesPerView: "auto",
-                    coverflowEffect: {
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: true,
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                });
-            }
         });
     </script>
 </body>

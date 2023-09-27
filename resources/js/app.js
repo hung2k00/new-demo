@@ -127,19 +127,37 @@ if ($(window).width() < 900) {
 }
 
 //Slide Video
-var swiperPlay1 = new Swiper(".mySwiperPlay", {
+var swiperVideoPlay = new Swiper(".textSwiper", {
+    slidesPerView: 1,
     spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  var swiperPlay2 = new Swiper(".mySwiper2", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    thumbs: {
-      swiper: swiper,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
     },
   });
+  function generateCaptcha() {
+    const captchaText = Math.random().toString(36).substring(2, 8).toUpperCase();
+    return captchaText;
+}
+
+// Hiển thị CAPTCHA ban đầu
+$('#captcha').text(generateCaptcha());
+
+// Xử lý sự kiện khi nút "Làm mới" được nhấn
+$('#refresh').click(function() {
+    $('#captcha').text(generateCaptcha());
+});

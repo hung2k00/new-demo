@@ -1,6 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+#captcha {
+    background: white;
+    color:#fd3379;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 10px;
+}
+#refresh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.slide_modal_video {
+    border: 2px solid black;
+    padding: 1rem 0rem;
+    background-color: #888;
+}
 video {
     width: 640px !important;
     height: 340px !important;
@@ -66,7 +86,7 @@ header {
             #ce469c 100.00%);
     padding: 1.5rem;
     height: 3rem;
-    border-color: white;
+    border: 4px solid white;
 }
 
 .header_download p {
@@ -353,7 +373,7 @@ input[type="text"] {
     display: none;
     /* Ẩn modal ban đầu */
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -586,7 +606,9 @@ input[type="text"] {
         top: 14%;
         border-radius: 3rem !important;
     }
-
+    #myModalVideo {
+        z-index: 100;
+    }
     #myModalVideo .modal-content {
         width: 100% !important;
     }
@@ -831,6 +853,41 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 530px) {
+    .full_captcha {
+        display: block;
+        gap: 0rem;
+        margin-top: unset;
+    }
+    .captcha_input {
+        width: 100%;
+    }
+    .captcha_show {
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+    #captcha {
+        height: 3rem;
+    }
+    video {
+        width: 640px !important;
+        height: 142px !important;
+    }
+    .slide_video .swiper-slide {
+        width: 15rem;
+    }
+    #myModalVideo .modal-wrapper {
+        width: 100%;
+    }
+    #myModalVideo .swiper-slide {
+        width: 23rem !important;
+        display: flex;
+    }
+    #myModalVideo .swiper-slide .modal_video img {
+        width: 50%;
+    }
+    #myModalVideo .swiper-wrapper {
+        height: 15vh;
+    }
     .swiperSponsers {
         width: 200%;
     }
@@ -858,8 +915,7 @@ input[type="text"] {
     }
 
     #myModalVideo .swiper {
-        width: 165%;
-        margin-left: -10rem;
+        width: 100%;
     }
 
     .full_slideVideo .modal-content {
@@ -1079,7 +1135,7 @@ input[type="text"] {
 
     .phone-feature .phone-items {
         margin-left: -2rem;
-        z-index: 100;
+        z-index: 1;
     }
 
     .under_feature .under_feature_img {
