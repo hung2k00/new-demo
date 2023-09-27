@@ -11,6 +11,10 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Demo-Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <ul class="absolute w-56 bg-white p-4 rounded-lg shadow-2xl shadow-slate-700 border hidden border-zinc-700"
+        <ul class="absolute z-50 w-56 bg-white p-4 rounded-lg shadow-2xl shadow-slate-700 border hidden border-zinc-700"
             id="ulHeader">
             <li>Về chúng tôi</li>
             <li>Tính năng nổi bật</li>
@@ -43,26 +47,35 @@
         </ul>
     </header>
     <main>
-        <div class="slider">
-            <img src="{{ asset('images/slider.png') }}" alt="hehhh" class="relative slide">
-            <img src="{{ asset('images/R.png') }}" alt="hehhh" class="slide">
-            <div class="all_text_slide flex  text-white items-center">
-                <div class="flex gap-36 all_text items-center p-4">
-                    <div class="left_arrow"><img src="{{ asset('images/left_arrow.png') }}" alt=""></div>
-                    <div class="">
-                        <p class="first_text">Chào mừng đến với hệ sinh thái</p>
-                        <div class="flex all_sentrip relative">
-                            <p class="sentrip">SENTRIP</p>
-                            <div class="absolute top-1 -right-10 sentrip_img">
-                                <img src="{{ asset('images/hoa.png') }}" alt="">
-                            </div>
-                        </div>
-                        <p class="italic last_text">Nhận ngay những thông tin du lịch hấp dẫn</p>
+        <div class="slider_first">
+            <div class="swiper mySwiperSlide">
+                <div class="swiper-wrapper" class="relative">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/slider.png') }}" alt="hehhh">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/R.png') }}" alt="hehhh">
                     </div>
                 </div>
-                <div class="ml-auto p-4 right_arrow">
-                    <img src="{{ asset('images/right_arrow.png') }}" alt="">
+                <div class="all_text_slide flex  text-white items-center z-50">
+                    <div class="flex gap-36 all_text items-center p-4">
+                        <div class="left_arrow"><img src="{{ asset('images/left_arrow.png') }}" alt=""></div>
+                        <div class="">
+                            <p class="first_text">Chào mừng đến với hệ sinh thái</p>
+                            <div class="flex all_sentrip relative">
+                                <p class="sentrip">SENTRIP</p>
+                                <div class="absolute top-1 -right-10 sentrip_img">
+                                    <img src="{{ asset('images/hoa.png') }}" alt="">
+                                </div>
+                            </div>
+                            <p class="italic last_text">Nhận ngay những thông tin du lịch hấp dẫn</p>
+                        </div>
+                    </div>
+                    <div class="ml-auto p-4 right_arrow">
+                        <img src="{{ asset('images/right_arrow.png') }}" alt="">
+                    </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
         <div class="relative full_slideVideo">
@@ -81,18 +94,50 @@
                     <div class="-ml-[24rem] -mt-[5rem] flower_info">
                         <img src="{{ asset('images/flower_Info.png') }}" alt="Flower">
                     </div>
-                    <div class="text_slide_info">
-                        <img src="{{ asset('images/TextInfo.png') }}" alt="">
+                    <div class="swiper mySwiperTextSlide hidden">
+                        <div class="flex swiper-wrapper">
+                            <div class="swiper-slide text_slide_info">
+                                <p>SenTrip là sản phẩm hợp tác chiến lược của Tổng cục Du lịch, Đài Truyền Hình Việt
+                                    Nam,
+                                    Tập đoàn Công nghiệp- Viễn thông Quân đội & Công ty Cổ phần Đầu tư và Phát triển
+                                    Công
+                                    nghệ Truyền thông Nam Việt.</p>
+                            </div>
+                            <div class="swiper-slide text_slide_info">
+                                <p>
+                                    Hệ sinh thái du lịch chính thống, uy tín bậc nhất Việt Nam. Hoạt động trên các
+                                    nền
+                                    tảng:
+                                    Ứng dụng, Website và Tổng đài Du lịch Việt Nam 1039.
+                                </p>
+                            </div>
+                            <div class="swiper-slide text_slide_info">
+                                <p>
+                                    Sentrip hỗ trợ du khách trong nước và quốc tế một cách toàn diện nhất, giúp du
+                                    khách
+                                    có
+                                    được chuyến đi thuận lợi, an toàn và vui vẻ.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="image-slider" id="clickVideo">
-                        <div class="image-slider1">
-                            <img src="{{ asset('images/slide_info1.png') }}" alt="">
-                        </div>
-                        <div class="image-slider2">
-                            <img src="{{ asset('images/slide_info2.png') }}" alt="">
-                        </div>
-                        <div class="image-slider3">
-                            <img src="{{ asset('images/slide_info3.png') }}" alt="">
+                    <div class="full_video_infoSlide w-[60%]">
+                        <div class="swiper swiperVideo">
+                            <div class="image-slider swiper-wrapper flex overflow-hidden" id="clickVideo">
+                                <div class="image-slider1 swiper-slide">
+                                    <img src="{{ asset('images/slide_info1.png') }}" alt="">
+                                </div>
+                                <div class="image-slider2 swiper-slide">
+                                    <img src="{{ asset('images/slide_info2.png') }}" alt="">
+                                </div>
+                                <div class="image-slider3 swiper-slide">
+                                    <img src="{{ asset('images/slide_info3.png') }}" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +145,7 @@
             <div>
                 <div id="myModalVideo" class="modal">
                     <div class="modal-wrapper relative top-[14%]">
-                        <div class="modal-content">
+                        <div class="modal-content slideIn">
                             <div class="float-right ml-auto" id="closeVideo">
                                 <i class="fa-solid fa-xmark" style="color: #d31763;"></i>
                             </div>
@@ -368,89 +413,92 @@
                 </div>
             </div>
         </div>
-        <div class="main__feature-items slider-container">
-            <div class="feature-items_2 mt-[4rem] hidden mix-features">
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/map_feature.png') }}" alt="">
+        <div class="main__feature-items slider-container hidden relative">
+        <div class="feature-items_2 mt-[4rem] mix-features hidden swiper swiperFeature">
+                <div class="swiper-wrapper flex">
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/map_feature.png') }}" alt="">
+                        </div>
+                        <div class="relative">
+                            <p class="text_label">Gian hàng địa phương</p>
+                            <p class="text_p">Gợi ý các điểm nổi bật, những xu hướng du lịch thu hút</p>
+                            <div class="absolute -top-[2rem]">
+                                <img src="{{ asset('images/line_feature.png') }}" alt="">
+                            </div>
+                        </div>
                     </div>
-                    <div class="relative">
-                        <p class="text_label">Gian hàng địa phương</p>
-                        <p class="text_p">Gợi ý các điểm nổi bật, những xu hướng du lịch thu hút</p>
-                        <div class="absolute -top-[2rem]">
-                            <img src="{{ asset('images/line_feature.png') }}" alt="">
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/light.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p class="text_label">Gợi ý thông minh</p>
+                            <p class="text_p">Gợi ý thông minh theo hành vi khách hàng: Đi đâu? Ở đâu? Ăn
+                                gì? Chơi gì?</p>
+                        </div>
+
+                    </div>
+
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/search.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p class="text_label">Tìm kiếm</p>
+                            <p class="text_p">Gợi ý các điểm đến nổi bật, những xu hướng du lịch thu hút
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/passport.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p class="text_label">Tạo lịch trình</p>
+                            <p class="text_p">Tự tạo lịch trình chuyến đi</p>
+                        </div>
+                    </div>
+
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/binder.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p class="text_label">Kho nội dung</p>
+                            <p class="text_p">Booking về máy bay, tour, khách sạn, nhà hàng</p>
+                        </div>
+                    </div>
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/chatbot.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p class="text_label">CHATBOT</p>
+                            <p class="text_p">Mạng xã hội chuyên biệt cho người du lịch</p>
+                        </div>
+                    </div>
+
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/travel-agency.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p class="text_label">Tổng đài du lịch</p>
+                            <p class="text_p">Tổng đài chăm sóc và hỗ trợ du lịch Việt Nam 1039</p>
+                        </div>
+                    </div>
+                    <div class="mix_feature swiper-slide">
+                        <div class="feature-items__img">
+                            <img src="{{ asset('images/wheel.png') }}" alt="">
+                        </div>
+                        <div>
+                            <p class="text_label">Vòng quay may mắn</p>
+                            <p class="text_p">Trải nghiệm truyền hình trực tuyến mọi lúc mọi nơi</p>
                         </div>
                     </div>
                 </div>
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/light.png') }}" alt="">
-                    </div>
-                    <div>
-                        <p class="text_label">Gợi ý thông minh</p>
-                        <p class="text_p">Gợi ý thông minh theo hành vi khách hàng: Đi đâu? Ở đâu? Ăn
-                            gì? Chơi gì?</p>
-                    </div>
-
-                </div>
-
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/search.png') }}" alt="">
-                    </div>
-                    <div>
-                        <p class="text_label">Tìm kiếm</p>
-                        <p class="text_p">Gợi ý các điểm đến nổi bật, những xu hướng du lịch thu hút
-                        </p>
-                    </div>
-                </div>
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/passport.png') }}" alt="">
-                    </div>
-                    <div>
-                        <p class="text_label">Tạo lịch trình</p>
-                        <p class="text_p">Tự tạo lịch trình chuyến đi</p>
-                    </div>
-                </div>
-
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/binder.png') }}" alt="">
-                    </div>
-                    <div>
-                        <p class="text_label">Kho nội dung</p>
-                        <p class="text_p">Booking về máy bay, tour, khách sạn, nhà hàng</p>
-                    </div>
-                </div>
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/chatbot.png') }}" alt="">
-                    </div>
-                    <div>
-                        <p class="text_label">CHATBOT</p>
-                        <p class="text_p">Mạng xã hội chuyên biệt cho người du lịch</p>
-                    </div>
-                </div>
-
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/travel-agency.png') }}" alt="">
-                    </div>
-                    <div>
-                        <p class="text_label">Tổng đài du lịch</p>
-                        <p class="text_p">Tổng đài chăm sóc và hỗ trợ du lịch Việt Nam 1039</p>
-                    </div>
-                </div>
-                <div class="mix_feature">
-                    <div class="feature-items__img">
-                        <img src="{{ asset('images/wheel.png') }}" alt="">
-                    </div>
-                    <div>
-                        <p class="text_label">Vòng quay may mắn</p>
-                        <p class="text_p">Trải nghiệm truyền hình trực tuyến mọi lúc mọi nơi</p>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
         <div class="last__slider">
@@ -466,8 +514,8 @@
                 </div>
             </div>
             <div class="last__slider-img relative h-full">
-                <div class="swiper mySwiper overflow-hidden">
-                    <div class="swiper-wrapper flex overflow-hidden">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="{{ asset('images/last_slider1.png') }}" />
                         </div>
@@ -587,9 +635,9 @@
                 <p>Các đơn vị tham gia</p>
                 <div class="-mt-[2rem]"><img src="{{ asset('images/line_underInfo.png') }}" alt=""></div>
             </div>
-            <div class="relative overflow-hidden">
+            <div class="relative w-[50%] -left-[10%]">
                 <div class="swiper swiperSponsers">
-                    <div class="swiper-wrapper flex gap-4">
+                    <div class="swiper-wrapper overflow-hidden flex">
                         <div class="swiper-slide">
                             <img src="{{ asset('images/sponsors1.png') }}" alt="">
                         </div>
@@ -650,53 +698,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script type="text/javascript">
-        function updateImages() {
-            var windowWidth = $(window).width();
-            if (windowWidth < 900) {
-                $(".image-slider2 img").attr("src", "{{ asset('images/slide_info2_fix.png') }}");
-                $(".image-slider3 img").attr("src", "{{ asset('images/slide_info3_fix.png') }}");
-            } else {
-                $(".image-slider2 img").attr("src", "{{ asset('images/slide_info2.png') }}");
-                $(".image-slider3 img").attr("src", "{{ asset('images/slide_info3.png') }}");
-            }
-        }
-        updateImages();
-        $(window).on("resize", updateImages);
-        var swiper_1 = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-        var swiper = new Swiper(".swiperSponsers", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-        // //change video
+        //change video
         $("div[data-video-source]").click(function() {
             var videoSource = $(this).data("video-source");
             $("#video-player source").attr("src", videoSource);
@@ -733,6 +735,7 @@
                 fullModal.addClass("modal");
                 fullModal.attr("id", "myModal");
                 modalContent.addClass("modal-content");
+                modalContent.addClass("slideIn");
                 contactButton.on("click", function() {
                     modal.css("display", "block");
                 });
